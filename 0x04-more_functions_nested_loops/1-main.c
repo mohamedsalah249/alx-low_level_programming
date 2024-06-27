@@ -1,5 +1,7 @@
-include "main.h"
 #include <stdio.h>
+#include <stddef.h>  /* Include for size_t definition */
+
+#include "main.h"
 
 /**
  * main - check the code
@@ -16,3 +18,4 @@ int main(void)
     printf("%c: %d\n", c, _isdigit(c));
     return (0);
 }
+
