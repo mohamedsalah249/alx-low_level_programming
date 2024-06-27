@@ -1,39 +1,22 @@
 #include "main.h"
-
 /**
- * print_number - Prints an integer
- * @n: The integer to print
+ * print_number - prints an integer
+ * @n:.input integer parameter
+ *
+ * Return:Always 0
  */
 void print_number(int n)
 {
-	int divisor = 1;
-	int digit;
-	int is_negative = 0;
+unsigned int i = n;
 
-	if (n < 0)
-	{
-		is_negative = 1;
-		n = -n; /* Make n positive */
-	}
-
-	/* Find the appropriate divisor to get the most significant digit */
-	while (n / divisor >= 10)
-	{
-		divisor *= 10;
-	}
-
-	/* Extract and print each digit */
-	while (divisor != 0)
-	{
-		digit = n / divisor; /* Extract the leftmost digit */
-		_putchar(digit + '0'); /* Print the digit as a character */
-		n %= divisor; /* Remove the printed digit from n */
-		divisor /= 10; /* Move to the next digit */
-	}
-
-	if (is_negative)
-	{
-		_putchar('-'); /* Print the negative sign */
-	}
+if (n < 0)
+{
+_putchar(45);
+i = -i;
 }
-
+if (i / 10)
+{
+print_number(i / 10);
+}
+_putchar(i % 10 + '0');
+}
